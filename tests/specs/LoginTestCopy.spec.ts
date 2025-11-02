@@ -20,7 +20,7 @@
 
 
 //Tests
-test.describe('Login Functionality Tests',()=>{
+test.describe('Login Functionality Tests @task',()=>{
    
   test(`Validate login with ${validloginTestData.type}`,async({page})=>{
           await poManager.getLoginPage().login(validloginTestData.username , validloginTestData.password);
