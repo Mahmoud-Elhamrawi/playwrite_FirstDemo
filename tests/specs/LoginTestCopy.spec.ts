@@ -8,12 +8,12 @@
     let poManager:PoManager;
 
     //Hooks
-    test.beforeEach(async({page})=>{
+    test.beforeEach('@task',async({page})=>{
         poManager = new PoManager(page);
         await poManager.getLoginPage().open();
     });
 
-    test.afterEach(async({page},testinfo)=>{
+    test.afterEach('@task',async({page},testinfo)=>{
         console.log(`Test completed: ${test}`);
     });
 
